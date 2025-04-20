@@ -5,8 +5,8 @@
 }
 
 body {
-  background: #2f3542 url("img/bg.jpg") no-repeat left center/cover;
-  color: #fff;
+  background: hsl(221, 17%, 22%) url("img/bg.jpg") no-repeat left center/cover;
+  color: #e7d8ff; /* CUSTOM CHANGE: changing the color of the words to light pastel purple */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
