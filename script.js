@@ -74,4 +74,31 @@ function checkNumber(msg) {
   if (num < 1 || num > 100) {
     const div = document.createElement("div");
     div.textContent =
-      "Number must be between 1 and
+      "Number must be between 1 and 100, the spectrum of mystics";
+    msgEl.append(div);
+    return;
+  }
+
+  // Check the number and provide feedback
+  if (num === randomNum) {
+    const h2 = document.createElement("h2");
+    h2.textContent = `ALAS IT IS CORRECT! ALL HAIL THE ONE! The number was ${num}`;
+
+    const button = document.createElement("button");
+    button.classList.add("play-again");
+    button.id = "play-again";
+    button.textContent = "Play Again";
+
+    msgEl.append(h2, button);
+  } else if (num > randomNum) {
+    const div = document.createElement("div");
+    div.textContent = "Crystal Ball says it's Too high, Try again";
+
+    msgEl.append(div);
+  } else {
+    const div = document.createElement("div");
+    div.textContent = "GO HIGHER Psychics don't think that low";
+
+    msgEl.append(div);
+  }
+}
