@@ -88,6 +88,8 @@ function checkNumber(msg) {
     button.classList.add("play-again");
     button.id = "play-again";
     button.textContent = "Play Again";
+    // Add listener and handler to button
+    button.addEventListener("click", () => window.location.reload());
 
     msgEl.append(h2, button);
   } else if (num > randomNum) {
